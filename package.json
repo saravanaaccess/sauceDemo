@@ -13,6 +13,7 @@
   "dependencies": {
     "@cucumber/cucumber": "11.3.0",
     "@playwright/test": "1.53.0",
+    "@faker-js/faker": "^8.4.1",
     "playwright": "1.53.0",
     "ts-node": "10.9.2",
     "typescript": "^5.1.6"

@@ -4,6 +4,7 @@ class cartPage {
         cartitemlist: () => '//div[@id="cart_contents_container"]//div[@class="cart_item"]',
         productname: (nth) => `(//div[@id="cart_contents_container"]//div[@class="cart_item"])[${nth}]//div[@class="inventory_item_name"]`,
         productprice: (nth) => `(//div[@id="cart_contents_container"]//div[@class="cart_item"])[${nth}]//div[@class="inventory_item_price"]`,
+        checkoutButton: () => '//button[@name="checkout"]',
         
     };
     async validateaddedproductexistincart(productnametoverify) {
@@ -17,6 +18,9 @@ class cartPage {
             }
         }
         return matchfound;
+    }
+    async checkout() {
+        await page.click(this.elements.checkoutButton());
     }
 }
 module.exports = {

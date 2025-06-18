@@ -4,6 +4,7 @@ Feature: swaglabs Feature
     When login with '<username>' and '<password>'
     And Add all products under $25 into cart
     Then verify the products are added into cart successfully    
+    And submit the order
     
     Examples:
       | URL                      | username                  | password  |

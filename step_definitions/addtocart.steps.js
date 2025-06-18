@@ -2,11 +2,14 @@ const { Given, When, Then } = require('@cucumber/cucumber')
 const { homePage } = require('../page-objects/homePage.js')
 const { productlistingPage } = require('../page-objects/productlistingPage.js')
 const { cartPage } = require('../page-objects/cartPage.js')
+const { checkoutPage } = require('../page-objects/checkoutPage.js')
 const { test, expect } = require('@playwright/test');
+const { faker } = require('@faker-js/faker');
 
 const homepage = new homePage();
 const productlistingpage = new productlistingPage();
 const cartpage = new cartPage();
+const checkoutpage = new checkoutPage();
 
 let productsadded;
 Given('open swaglabs thru {string}', async function(url){
@@ -33,3 +36,7 @@ Then('verify the products are added into cart successfully', async () => {
         expect(actual).toBe(true);
     }
 });
+Then('submit the order', async () => {
+    await cartpage.checkout();
+    await checkoutpage.submitorder(faker.name.firstName(), faker.name.lastName(), faker.finance.accountNumber(4));
+})
