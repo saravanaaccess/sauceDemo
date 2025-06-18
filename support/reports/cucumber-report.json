@@ -1,0 +1,92 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "swaglabs-feature;swaglabs-add-to-cart",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "swaglabs add to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2529405300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "open swaglabs thru 'https://www.saucedemo.com/'",
+            "match": {
+              "location": "step_definitions\\addtocart.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2897959999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "login with 'standard_user' and 'secret_sauce'",
+            "match": {
+              "location": "step_definitions\\addtocart.steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14549696799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "Add all products under $25 into cart",
+            "match": {
+              "location": "step_definitions\\addtocart.steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4282413599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "verify the products are added into cart successfully",
+            "match": {
+              "location": "step_definitions\\addtocart.steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1249146099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 159889900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "swaglabs-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "swaglabs Feature",
+    "tags": [],
+    "uri": "features\\addtocart.feature"
+  }
+]

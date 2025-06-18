@@ -1,0 +1,23 @@
+{
+  "name": "cucumber-playwright-SauceDemo",
+  "version": "1.0.0",
+  "description": "Automation Demo for SauceDemo",
+  "main": "index.js",
+  "scripts": {
+    "test:addtocart": "cucumber-js features\\addtocart.feature --format json:support\\reports\\cucumber-report.json",
+    "report:html" : "node cucumber-html-reporter.js"
+  },
+  "keywords": [],
+  "author": "Saravana",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "11.3.0",
+    "@playwright/test": "1.53.0",
+    "playwright": "1.53.0",
+    "ts-node": "10.9.2",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^7.1.1"
+  }
+}
