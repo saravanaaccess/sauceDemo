@@ -22,8 +22,8 @@ When('login with {string} and {string}', async function(username,password){
     await homepage.clickloginButton();
 });
 
-When('Add all products under $25 into cart', async () => {
-    productsadded = await productlistingpage.addtocart(25);
+When('Add all products under {int} into cart', async (pricelimit) => {
+    productsadded = await productlistingpage.addtocart(pricelimit);
 });
 
 Then('verify the products are added into cart successfully', async () => {
